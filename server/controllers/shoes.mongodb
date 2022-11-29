@@ -1,0 +1,17 @@
+use("sport")
+
+db.shoes.insertOne(
+  {"shoes":{
+  "_id": "80",
+  "type": "running",
+  "brand": "Adidas",
+  "model": "ultraboost",
+  "price": 399,
+  "quantity": 60,
+  "isOnSale": "true",
+  "img": "https://assets.adidas.com/images/w_940,f_auto,q_auto/382b894cb4b348af8e8cadf900a2683b_9366/GX5497_01_standard.jpg"
+}}
+
+)
+
+db.shoes.find()
