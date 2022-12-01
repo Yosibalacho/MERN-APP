@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
-const users_db = process.env.USERS_DB;
+const CONNECTION_STRING = process.env.CONNECTION_STRING;
 
 mongoose
-  .connect(users_db, {
+  .connect(CONNECTION_STRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -11,5 +11,4 @@ mongoose
   .catch((error) => {
     console.error("Connection failed", error.message);
   });
-const db = mongoose.connection;
-module.exports = db;
+module.exports = mongoose.connection;
